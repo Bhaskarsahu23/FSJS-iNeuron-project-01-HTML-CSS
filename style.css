@@ -1,0 +1,250 @@
+:root {
+    --cl-white: hsl(0, 0%, 88%);
+    --cl-black: hsl(0, 0%, 0%);
+    --cl-grey-light: hsl(0, 0%, 98%);
+    --cl-grey: #7f7f7f;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondry: 'Orbitron', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--ff-primary);
+    line-height: 1.5;
+    background-color: var(--cl-grey-light);
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.container {
+    margin: 2rem 5rem;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container > div:nth-of-type(1) img {
+    height: 4rem;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.list li {
+    margin-right: 5rem;
+    font-size: 1.5rem;
+    font-family: var(--ff-secondry);
+    position: relative;
+    cursor: pointer;
+}
+
+.list li:hover,
+li:active,
+li:focus,
+li:visited {
+    font-weight: bolder;
+}
+
+.list li:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: var(--cl-black);
+}
+
+.list li:first-of-type {
+    font-weight: bolder;
+}
+
+li:first-of-type::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: var(--cl-black);
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.button-group .search-icon {
+    width: 2rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.button-group .nav-button {
+    padding: 0.5rem 2.2rem;
+    border-radius: 8px;
+    color: var(--cl-grey);
+    border: 2px solid var(--cl-black);
+    cursor: pointer;
+}
+
+.hero-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 12rem;
+    position: relative;
+}
+
+.square {
+    position: absolute;
+    top: 17rem;
+    left: 10rem;
+}
+
+.square img {
+    height: 26rem;
+}
+
+.hero-container div:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-container > div:first-of-type img {
+    height: 38rem;
+}
+
+.globe {
+    position: absolute;
+    left: 52%;
+    top: -5rem;
+}
+
+.globe img {
+    height: 6rem;
+}
+
+.star {
+    position: absolute;
+    left: 88%;
+    top: 2rem;
+}
+
+.hero-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+}
+
+.hero-container-right .hero-heading {
+    font-size: 4rem;
+    font-family: var(--ff-secondry);
+}
+
+.hero-container-right .hero-description {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    line-height: 1.7;
+    position: absolute;
+    margin-top: 8rem;
+}
+
+.hero-container-right .button-email {
+    position: absolute;
+    margin-left: 12rem;
+    top: 18rem;
+    padding: 0.5rem 1rem;
+    width: 16rem;
+    border-radius: 10px;
+    font-family: var(--ff-secondry);
+    border: 2px solid var(--cl-black);
+    letter-spacing: 0.2rem;
+    outline: none;
+}
+
+.hero-container-right .button-join {
+    position: absolute;
+    margin-top: 18rem;
+    margin-left: 29rem;
+    width: 10rem;
+    padding: 0.5rem;
+    font-family: var(--ff-secondry);
+    color: var(--cl-white);
+    background-color: var(--cl-black);
+    border-radius: 10px;
+    outline: none;
+}
+
+.hero-container-right .contact-heading {
+    position: absolute;
+    top: 24rem;
+    margin-left: 24rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-container-right .icons {
+    display: flex;
+    margin-top: 27rem;
+    margin-left: 16rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-container-right .icons span:not(:first-of-type) {
+    margin-left: 2rem;
+}
+
+.hero-container-right .icons::before {
+    content: url(./assets/start.png);
+    display: block;
+
+    position: absolute;
+    left: -28rem;
+    top: -5rem;
+}
